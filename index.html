@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Dicoding Project</title>
+</head>
+<body>
+    <header>
+        <h1>Data Buku</h1>
+    </header>
+    <div class="input-wrapper">
+        <div class="input-container">
+            <h2>Input Data Buku</h2>
+            <form class="form" action="#" id="form">
+                <div class="form-group form-title">
+                    <label for="title">Masukkan Judul Buku</label>
+                    <input type="text" id="title" name="title" required>
+                    <label for="title">Masukkan Penulis Buku</label>
+                    <input type="text" id="author" name="author" required>
+                    <label for="title">Masukkan Tahun Buku</label>
+                    <input type="number" id="year" name="year" required>
+                </div>
+                <input type="submit" value="Submit" name="Submit" class="btn-submit">
+            </form>
+        </div>
+        <div class="input-container gap">
+            <form action="#" class="form">
+                <input class="search" type="text" id="search" name="search" onkeyup="searchbook()" placeholder="Search....." required>
+            </form>
+        </div>
+        <div class="input-container gap">
+            <form action="#" class="form">
+                <label for="editTitle" class="editLabel">Enter a replacement title here and then click on the pencil on the book you want to change the title</label>
+                <input class="search" type="text" id="editTitle" name="editTitle" placeholder="edit title to.....">
+            </form>
+        </div>
+    </div>
+    <div class="list-wrapper">
+        <div class="container">
+            <h2>Belum selesai dibaca</h2>
+            <ul class="list-item" id="notDone"></ul>
+        </div>
+        <div class="container">
+            <h2>Sudah selesai dibaca</h2>
+            <ul class="list-item" id="done"></ul>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

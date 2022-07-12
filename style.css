@@ -1,0 +1,181 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lato', sans-serif;
+}
+
+header{
+    background-color: red;
+    color: black;
+    padding: 10px;
+}
+
+.input-wrapper{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    flex-direction: column;
+    padding-top: 10px;
+}
+
+.gap{
+    margin-top: 10px;
+}
+
+.search{
+    font-size: 15px !important;
+    background-color: whitesmoke !important;
+}
+
+.input-container{
+    padding: 5px;
+    border-radius: 5px;
+    text-align: center;
+    width: 80%;
+    background-color: rgb(249, 110, 110);
+}
+
+.item{
+    margin: 10px;
+    border: 1px solid black;
+    border-radius: 15px;
+    display: flex;
+    padding: 10px;
+    font-size: 25px;
+    text-transform: capitalize;
+    background-color: rgb(249, 110, 110);
+    align-items: center;
+}
+
+.itemInner{
+    display: flex;
+    font-size: 15px;
+}
+
+.form{
+    display: flex;
+    padding: 10px;
+    flex-direction: column;
+}
+
+.form-group{
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    margin-bottom: 1px;
+    font-size: 15px;
+    font-weight: lighter;
+    text-align: left;
+    font-style: italic;
+}
+
+.editLabel{
+    font-size: 20px;
+    text-align: left;
+}
+
+input[type=text], input[type=number]{
+    border-radius: 8px;
+    padding: 10px;
+    box-sizing: border-box;
+    margin-bottom: 8px;
+    font-size: 24px;
+    background-color: rgb(110, 154, 249);
+}
+
+.btn-submit{
+    padding: 5px;
+    font-size: 20px;
+    border-radius: 5px;
+    text-transform: uppercase;
+    background-color: rgb(117, 249, 110);
+}
+
+.list-wrapper{
+    display: flex;
+    width: 100%;
+}
+
+.container{
+    width: 50%;
+    border: transparent;
+    margin: 10px;
+    text-align: center;
+    border-radius: 15px;
+}
+
+.check-button {
+    width: 40px;
+    height: 40px;
+
+    background: url('./assets/badge-check.svg');
+    background-size: contain;
+    margin-left: auto;
+    cursor: pointer;
+    border: none;
+}
+
+.check-button:hover {
+    background: url('./assets/badge-check-fill.svg');
+    background-size: contain;
+}
+
+.trash-button {
+    width: 40px;
+    height: 40px;
+
+    background: url('./assets/trash.svg');
+    background-size: contain;
+    margin-left: 16px;
+    cursor: pointer;
+    border: none;
+}
+
+.edit-button{
+    width: 40px;
+    height: 40px;
+
+    background: url('./assets/pencil.svg');
+    background-size: contain;
+    margin-left: 16px;
+    cursor: pointer;
+    border: none;
+}
+
+.edit-button:hover{
+    background: url('./assets/pencil-fill.svg');
+    background-size: contain;
+}
+
+.trash-button:hover {
+    background: url('./assets/trash-fill.svg');
+    background-size: contain;
+}
+
+.undo-button {
+    width: 40px;
+    height: 40px;
+
+    background: url('./assets/undo.svg');
+    background-size: contain;
+    margin-left: auto;
+    cursor: pointer;
+    border: none;
+}
+
+.undo-button:hover {
+    background: url('./assets/undo-fill.svg');
+    background-size: contain;
+}
+
+.check-button:focus, .trash-button {
+    outline: none;
+}
+
+h3{
+    margin-right: 10px;
+}
