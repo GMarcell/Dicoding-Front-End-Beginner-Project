@@ -126,6 +126,7 @@ function makeBook(bookObject){
 
         const editButton = document.createElement('button');
         editButton.classList.add('edit-button');
+        editButton.id = 'editBtn'
         editButton.addEventListener('click', function (event) {
             event.preventDefault()
             editBook(bookObject.id);
@@ -146,7 +147,8 @@ function makeBook(bookObject){
         });
 
         const editButton = document.createElement('button');
-        editButton.classList.add('edit-button');
+        editButton.classList.add('edit-button')
+        editButton.id = 'editBtn'
         editButton.addEventListener('click', function (event) {
             event.preventDefault()
             editBook(bookObject.id);
@@ -176,8 +178,6 @@ function findBookIndex(bookId){
     return -1
 }
 
-
-
 function addBookToDone(bookId){
     const bookTarget = findBook(bookId)
     if(bookTarget == null) return
@@ -204,11 +204,31 @@ function undoBookFromDone(bookId){
 
 function editBook(bookId){
     const bookTarget = findBook(bookId)
-    const changedTitle = document.getElementById('editTitle')
+    const modal = document.getElementById("myModal")
+    const span = document.getElementsByClassName("close")[0]
+    modal.style.display = "block"
+    span.onclick = function(){
+        modal.style.display = "none"
+    }
+    window.onclick = function(event){
+        if(event.target == modal){
+            modal.style.display = "none"
+        }
+    }
+    const submitEditedTitle = document.getElementById('editedTitle')
+    const editedTitle = document.getElementById('editTitleInput')
+    const editedAuthor = document.getElementById('editAuthorinput')
+    const editedYear = document.getElementById('editYearInput')
     if(bookTarget === -1) return
-    bookTarget.title = changedTitle.value
-    document.dispatchEvent(new Event(RENDER_EVENT))
-    saveData()
+    submitEditedTitle.addEventListener('submit', function(event){
+        event.preventDefault()
+        bookTarget.title = editedTitle.value
+        bookTarget.author = editedAuthor.value
+        bookTarget.year = editedYear.value
+        document.dispatchEvent(new Event(RENDER_EVENT))
+        saveData()
+        modal.style.display = "none"
+    })
 }
 
 function searchbook(){

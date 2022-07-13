@@ -31,12 +31,12 @@
                 <input class="search" type="text" id="search" name="search" onkeyup="searchbook()" placeholder="Search....." required>
             </form>
         </div>
-        <div class="input-container gap">
+        <!-- <div class="input-container gap">
             <form action="#" class="form">
                 <label for="editTitle" class="editLabel">Enter a replacement title here and then click on the pencil on the book you want to change the title</label>
                 <input class="search" type="text" id="editTitle" name="editTitle" placeholder="edit title to.....">
             </form>
-        </div>
+        </div> -->
     </div>
     <div class="list-wrapper">
         <div class="container">
@@ -46,6 +46,21 @@
         <div class="container">
             <h2>Sudah selesai dibaca</h2>
             <ul class="list-item" id="done"></ul>
+        </div>
+    </div>
+    <div id="myModal" class="modal">
+        <!-- Modal content -->
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <form action="#" class="form" id="editedTitle">
+                <label for="editTitleInput" class="editLabel">Enter a replacement title here</label>
+                <input class="search" type="text" id="editTitleInput" name="editTitleInput" placeholder="edit title to.....">
+                <label for="editAuthorinput" class="editLabel">Enter a replacement author here</label>
+                <input class="search" type="text" id="editAuthorinput" name="editAuthorinput" placeholder="edit title to.....">
+                <label for="editYearInput" class="editLabel">Enter a replacement year here</label>
+                <input class="search" type="number" id="editYearInput" name="editYearInput" placeholder="edit title to.....">
+                <input type="submit" value="Submit" name="submitEditedTitle" id="submitEditedTitle" class="btn-submit">
+            </form>
         </div>
     </div>
     <script src="script.js"></script>
